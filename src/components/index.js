@@ -32,10 +32,10 @@ const Layout = props => {
               <li className="nav-about" role="menuitem">
                 <Link to={`/about`}>About</Link>
               </li>
-              <li className="nav-portfolio" role="menuitem">
+              <li className="nav-about" role="menuitem">
                 <Link to={`/portfolio`}>Portfolio</Link>
               </li>
-              <li className="nav-contact" role="menuitem">
+              <li className="nav-about" role="menuitem">
                 <Link to={`/contact`}>Contact</Link>
               </li>
             </ul>
@@ -48,6 +48,22 @@ const Layout = props => {
           <div className="site-head-right">
             <div className="social-links">
               <a
+                href="https://www.instagram.com/jenlarissaphoto/"
+                title="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://www.pinterest.com"
+                title="Pinterest"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Pinterest
+              </a>
+              <a
                 href="https://www.facebook.com"
                 title="Facebook"
                 target="_blank"
@@ -55,22 +71,6 @@ const Layout = props => {
               >
                 Facebook
               </a>
-              <a
-                href="https://twitter.com"
-                title="Twitter"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Twitter
-              </a>
-              <Link
-                to={`/rss.xml`}
-                title="RSS"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                RSS
-              </Link>
             </div>
           </div>
         </div>
@@ -81,15 +81,7 @@ const Layout = props => {
         </div>
       </main>
       <footer className="site-foot">
-        &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link> &mdash;
-        Built with{" "}
-        <a
-          href="https://gatsbyjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Gatsby
-        </a>
+        &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link>
       </footer>
     </div>
   )

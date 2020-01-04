@@ -17,8 +17,8 @@ const BlogIndex = ({ data }, location) => {
   return (
     <Layout title={siteTitle}>
       <SEO
-        title="All posts"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+        title="Jen Larissa"
+        keywords={[`photography`, `family`, `portaits`, `couples`]}
       />
       {/* <Bio /> */}
       {data.site.siteMetadata.description && (
@@ -28,6 +28,19 @@ const BlogIndex = ({ data }, location) => {
           </h2>
         </header>
       )}
+      <div className="post-feed">
+        {posts.map(({ node }) => {
+          postCounter++
+          return (
+            <PostCard
+              key={node.fields.slug}
+              count={postCounter}
+              node={node}
+              postClass={`post`}
+            />
+          )
+        })}
+      </div>
     </Layout>
   )
 }
